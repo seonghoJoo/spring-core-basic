@@ -14,7 +14,6 @@ public class OrderServiceTest {
     MemberService memberService;
     OrderService orderService;
 
-
     //테스트 실행전 무적권 실행
     @BeforeEach
     public void beforeEach(){
@@ -25,12 +24,15 @@ public class OrderServiceTest {
 
     @Test
     void createOrder(){
+        // primitive type을 하면 null을 못넣는다.
+        // long memberId = 1; 을 안하는 이유.
         Long memberId = 1L;
         Member member = new Member(memberId, "memberA", Grade.VIP);
         memberService.join(member);
 
         Order order = orderService.createOrder(memberId,"itemA", 10000);
         Assertions.assertThat(order.getDiscountPrice()).isEqualTo(9000);
+
     }
 
 }

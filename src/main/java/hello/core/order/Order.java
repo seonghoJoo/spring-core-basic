@@ -21,6 +21,7 @@ public class Order {
         this.discountPrice = discountPrice;
     }
 
+    // 비즈니스 로직
     public int calculatePrice(){
         return itemPrice - discountPrice;
     }
