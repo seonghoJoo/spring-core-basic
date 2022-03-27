@@ -7,4 +7,10 @@
 AppConfig가 제어의 역전을 함.
 OrderServiceImpl 은 그저 자신이 할일 createOrder만 실행을 함.
 
+## BeanFactory
+1. 스프링 컨테이너의 최상위 인터페이스
+2. 스프링 빈을 관리하고 조회하는 역할 담당
+3. ```getBean()```을 제공한다.
+4. ```BeanFactory``` -> ```ApplicationContext``` -> ```AnnotationConfig ApplicationContext```
+
 
