@@ -13,4 +13,5 @@ OrderServiceImpl 은 그저 자신이 할일 createOrder만 실행을 함.
 3. ```getBean()```을 제공한다.
 4. ```BeanFactory``` -> ```ApplicationContext``` -> ```AnnotationConfig ApplicationContext```
 
-
+## 싱글톤
+```@Configuration```을 통해 빈등록을 하게 되면 무리하게 객체 생성을 안 할 수 있다.
